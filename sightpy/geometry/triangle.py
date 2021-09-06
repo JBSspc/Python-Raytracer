@@ -55,7 +55,7 @@ class Triangle_Collider(Collider):
         pred3 = True
         return np.select([pred1,pred2,pred3] , [[dis, np.tile(UPWARDS, dis.shape) ], [dis,np.tile(UPDOWN, dis.shape)], FARAWAY])
 
-    def rotate(self,M, center):
+    """def rotate(self,M, center):
         self.p1 = center + (self.p1 -center).matmul(M)
         self.p2 = center + (self.p2 -center).matmul(M)
         self.p3 = center + (self.p3 -center).matmul(M)
@@ -64,7 +64,7 @@ class Triangle_Collider(Collider):
         self.n12 = self.n12.matmul(M)
         self.n23 = self.n23.matmul(M)
         self.normal = self.normal.matmul(M)
-        self.centroid = center + (self.centroid-center).matmul(M)
+        self.centroid = center + (self.centroid-center).matmul(M)"""
         
     def get_uv(self, hit):
         M_C = hit.point - self.center

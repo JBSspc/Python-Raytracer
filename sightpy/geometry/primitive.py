@@ -12,7 +12,7 @@ class Primitive:
         self.collider_list = [] 
         self.max_ray_depth = max_ray_depth
         
-    def rotate(self, θ, u):
+    """def rotate(self, θ, u):
         
         u = u.normalize()
         θ = θ/180 *np.pi 
@@ -26,5 +26,5 @@ class Primitive:
                        [u.z*u.x*(1-cosθ) -u.y*sinθ,             u.z*u.y*(1-cosθ) + u.x*sinθ,         cosθ + u.z*u.z*(1-cosθ)]
                       ])
         for c in self.collider_list:
-            c.rotate(M, self.center)
+            c.rotate(M, self.center)"""
             
