@@ -18,12 +18,15 @@ def main():
     Sc.add_DirectionalLight(Ldir = vec3(0.0,0.5, 0.5),  color = rgb(0.5, 0.5, 0.5))
     Sc.add(Plane(material = floor,  center = vec3(0, -0.5, -3.0), width = 6.0,height = 6.0, u_axis = vec3(1.0, 0, 0), v_axis = vec3(0, 0, -1.0) , max_ray_depth = 5))
 
-    # CREAT Objetos de las clases (para las figuras) ===========================================================================
+    # CREAR Objetos de las clases (para las figuras) ===========================================================================
     # Creamos los objetos de las diferentes clases (1 cubo de la case 'Cuboid', 2 esferas de la clase 'Sphere') #180,1.2,0.25
     gcb_c = Cuboid( material = blue_glass, center = vec3(-0.8, 0.5, -0.8), width = 0.9,height = 1.0, length = 0.4, shadow = False,  max_ray_depth = 5)
     bm_s = Sphere(material = bluish_metal, center = vec3(-1.1, 0.27, -4), radius = .25, shadow = False,max_ray_depth = 3)
     rc_s = Sphere(material = red_glass, center = vec3(1, 0.25, -1), radius = .26, shadow = False,max_ray_depth = 3)
 
+    """
+    Mi código para matrices vectorizadas: https://colab.research.google.com/drive/13HJRpq5yvdYZ7UjErlCIFdDi4RRdRd-H?hl=es
+    """
     # Aplicamos la rotación al cuboide azul de cristal 
     gcb_c.rotate(θ = 91, u = vec3(0,1,0)) #Utilizando la función 'rotate()' de la clase 'Cuboid'
 
